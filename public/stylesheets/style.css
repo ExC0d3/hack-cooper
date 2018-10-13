@@ -151,7 +151,11 @@ input {
   color:white;
 }
 .smallButton{
-  color:#42a3b8;
+  color:white;
+  border:2px white solid;
+  border-radius:5px;
+  background:none;
+  
 }
 .dealIndex{
   margin: 10px;

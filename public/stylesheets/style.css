@@ -2,7 +2,7 @@
   overflow: hidden;
   background-color: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
 }
-#registerLink, #settingsLink{
+#registerLink, #settingsLink, #addDealLink{
   font-size: 12px;
   float: right;
   padding: 18px 16px;
@@ -140,7 +140,13 @@ input {
   font-family:Roboto;
   text-align:center;
 }
-
+.shareBox{
+  color:white;
+  border: white solid;
+  padding: 10px;
+  margin:auto;
+  width:80%;
+}
 .checkbox{
   margin-left:20px;
 }
@@ -149,13 +155,6 @@ input {
 }
 .lead {
   color:white;
-}
-.smallButton{
-  color:white;
-  border:2px white solid;
-  border-radius:5px;
-  background:none;
-  
 }
 .dealIndex{
   margin: 10px;
@@ -175,12 +174,16 @@ input {
   font-size: 14px;
 }
 .buyButton {
-  background: none;
+  background: white;
+  color:#ef6a62;
   border: none;
-  padding: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  margin: 5px;
 }
 .dealMenu {
-  background: white;
+  display: flex;
+  justify-content: center;
 }
 .button {
   background: 4px solid white;

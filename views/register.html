@@ -4,11 +4,11 @@
   <meta charset = "utf-8">
   <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
   <meta name = "viewport" content = "width=device-width, initial-scale=1">
-  <meta name = "description" content = "GoDeals">
+  <meta name = "description" content = "iDeal">
   <meta name = "author" content = "Hack Cooper Team">
   <link rel = "icon" href = "images/Entypo_e70c(0)_14.png">
 
-  <title> GoDeals </title>
+  <title> iDeal </title>
 
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -50,8 +50,6 @@
 		}
 		
 		function goHome(){
-		  var modal = document.getElementsByClassName('modal');
-		  modal.style.display = "none";
 		  location.href = "index.html";
 		}
   </script>
@@ -60,7 +58,7 @@
 <body>
   
     <div class="topnav">
-    <a href="index.html">GoDeals</a>
+    <a href="index.html">iDeal</a>
     <a id="settingsLink" href="user.html">SETTINGS</a>
     <a id="registerLink" href="register.html">SIGN UP</a>
   </div>
@@ -100,7 +98,7 @@
         <label for="InputPassword1">PASSWORD</label>
         <input type="password" class="form-control" id="InputPassword">
       </div>
-      <button class="smallButton" onclick="showPopUp()">SUBMIT</button>
+      <button class="btn btn-info" onclick="showPopUp()">SUBMIT</button>
     </form>
   </div>
   
@@ -144,7 +142,7 @@
         <option value="other">OTHER</option>
       </select>
     </div>
-    <button class="smallButton" onclick="showPopUp()">SUBMIT</button>
+    <button class="btn btn-info" onclick="showPopUp()">SUBMIT</button>
   </form>
   </div>
   
@@ -154,7 +152,7 @@
       <div class="buttonBody">
         <div class="fancy-button">
           <div class="left-frills frills"></div>
-          <div class="button" onclick="goHome()" style="font-size:.7em">Go to Homepage</div>
+          <div class="button" onclick="goHome()" style="font-size:.7em; height:35px; line-height:30px; margin-bottom:10px">Go to Homepage</div>
           <div class="right-frills frills"></div>
         </div>
       </div>

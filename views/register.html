@@ -40,7 +40,18 @@
       y.style.display = "block";
 		}
 		
+		function showPopUp(){
+			var x = document.getElementById("shopperForm");
+      x.style.display = "none";
+      var y = document.getElementById("businessForm");
+      y.style.display = "none";
+      var z = document.getElementById("popUp");
+      z.style.display = "block";
+		}
+		
 		function goHome(){
+		  var modal = document.getElementsByClassName('modal');
+		  modal.style.display = "none";
 		  location.href = "index.html";
 		}
   </script>
@@ -48,16 +59,11 @@
 
 <body>
   
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">GoDeals</a>
-  
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active">
-        <a class="nav-link" href="user.html">Settings</a>
-      </li>
-    </ul>
-  </nav>
+    <div class="topnav">
+    <a href="index.html">GoDeals</a>
+    <a id="settingsLink" href="user.html">SETTINGS</a>
+    <a id="registerLink" href="register.html">SIGN UP</a>
+  </div>
   <br>
   <br>
   <br>
@@ -81,67 +87,79 @@
   
   <div id="shopperForm" style="display: none">
     <h1>Shopper Sign Up</h1>
-    <form name="shopper" method="post">
+    <form name="shopper">
       <div class="form-group">
-        <label for="InputName">Full Name</label>
-        <input type="text" class="form-control" id="InputName" placeholder="Name">
+        <label for="InputName">FULL NAME</label>
+        <input type="text" class="form-control" id="InputName">
       </div>
       <div class="form-group">
-        <label for="InputEmail1">Email Address</label>
-        <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
+        <label for="InputEmail1">EMAIL ADDRESS</label>
+        <input type="email" class="form-control" id="InputEmail">
       </div>
       <div class="form-group">
-        <label for="InputPassword1">Password</label>
-        <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+        <label for="InputPassword1">PASSWORD</label>
+        <input type="password" class="form-control" id="InputPassword">
       </div>
-      <button type="submit" class="btn btn-info" onclick=goHome()>Submit</button>
+      <button class="smallButton" onclick="showPopUp()">SUBMIT</button>
     </form>
   </div>
   
   <div id="businessForm" style="display: none">
     <h1>Business Sign Up</h1>
-    <form name="business" method="post" >
+    <form name="business">
     <div class="form-group">
-      <label for="InputName">Business Name</label>
-      <input type="text" class="form-control" id="InputName" placeholder="Name">
+      <label for="InputName">BUSINESS NAME</label>
+      <input type="text" class="form-control" id="InputName">
     </div>
     <div class="form-group">
-      <label for="InputEmail">Email Address</label>
-      <input type="email" class="form-control" id="InputEmail" placeholder="Enter email">
+      <label for="InputEmail">EMAIL ADDRESS</label>
+      <input type="email" class="form-control" id="InputEmail">
     </div>
     <div class="form-group">
-      <label for="InputPassword">Password</label>
-      <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+      <label for="InputPassword">PASSWORD</label>
+      <input type="password" class="form-control" id="InputPassword">
     </div>
     <div class="form-group">
-      <label for="InputStreetAddress">Street Address</label>
+      <label for="InputStreetAddress">STREET ADDRESS</label>
       <input type="text" class="form-control" id="InputStreetAddress">
     </div>
     <div class="form-group">
-      <label for="InputCityAddress">City</label>
+      <label for="InputCityAddress">CITY</label>
       <input type="text" class="form-control" id="InputCityAddress">
     </div>
     <div class="form-group">
-      <label for="InputZipCode">Zip Code</label>
+      <label for="InputZipCode">ZIP CODE</label>
       <input type="number" class="form-control" id="InputZipCode">
     </div>
     <div class="form-group">
-      <label for="InputBusinessType">Business Type</label>
+      <label for="InputBusinessType">BUSINESS TYPE</label>
       <select id="InputBusinessType">
-        <option value="cosmetics">Cosmetics</option>
-        <option value="apparel">Apparel</option>
-        <option value="restaurant">Restaurant</option>
-        <option value="electronics">Electronic Appliances</option>
-        <option value="bookshop">Bookshop</option>
-        <option value="salon">Salon</option>
-        <option value="petshop">Pet Shop</option>
-        <option value="other">Other</option>
+        <option value="cosmetics">COSMETICS</option>
+        <option value="apparel">APPAREL</option>
+        <option value="restaurant">RESTAURANT</option>
+        <option value="electronics">ELECTRONIC APPLIANCES</option>
+        <option value="bookshop">BOOKSHOP</option>
+        <option value="salon">SALON</option>
+        <option value="petshop">PET SHOT</option>
+        <option value="other">OTHER</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-info" onclick=goHome()>Submit</button>
+    <button class="smallButton" onclick="showPopUp()">SUBMIT</button>
   </form>
   </div>
+  
+  <div>
+    <div class="popUp" id="popUp">
+      <div class="popUpTxt">Congrats! You have registered successfully!</div>
+      <div class="buttonBody">
+        <div class="fancy-button">
+          <div class="left-frills frills"></div>
+          <div class="button" onclick="goHome()" style="font-size:.7em">Go to Homepage</div>
+          <div class="right-frills frills"></div>
+        </div>
+      </div>
+		</div>
+	</div>
 </body>
-
 
 </html>

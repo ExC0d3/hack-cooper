@@ -1,13 +1,27 @@
-.navbar .navbar-expand-lg .navbar-light .bg-light{
-  background:white;
+.topnav {
+  overflow: hidden;
+  background-color: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
 }
- 
+#registerLink, #settingsLink{
+  font-size: 12px;
+  float: right;
+  padding: 18px 16px;
+}
+.topnav a {
+  float:left;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 form {
   width: 90%;
   margin: 10px auto;
   padding: 15px;
-  background: #f4f7f8;
-  border-radius: 8px;
+  background: none;
+  border: white solid;
 }
 
 h1 {
@@ -28,16 +42,15 @@ input[type="time"],
 input[type="url"],
 textarea,
 select {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
+  background: none;
+  border: white solid;
   font-size: 16px;
   height: auto;
   margin: 0;
   outline: 0;
   padding: 15px;
   width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
+  color: white;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
 }
@@ -67,6 +80,7 @@ legend {
 label {
   display: block;
   margin-bottom: 8px;
+  color: white;
 }
 
 label.light {
@@ -95,13 +109,10 @@ body, html {
 
 body {
   margin: 0;
-  background-image: linear-gradient(#ff9966, #ff5e62);
+  background: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
 }
 input {
   width: 75%;
-}
-.jumbotron{
-  margin:75px;
 }
 .dealBox{
   margin:50px;
@@ -109,11 +120,63 @@ input {
   border-radius:5px;
   padding:10px;
 }
+.popUp {
+    display: none;
+    margin:auto;
+    width: 80%; 
+    height: 80%;
+    overflow: auto;
+    background: 4px solid white;
+    border: solid white;
+    color: white;
+    font-family: Roboto;
+    letter-spacing: .2px;
+    text-align: center;
+    padding:20px;
+    font-size:2em;
+}
+.popUpTxt{
+  color:white;
+  font-family:Roboto;
+  text-align:center;
+}
+
 .checkbox{
   margin-left:20px;
 }
 .buttonBody{
   display:flex;
+}
+.lead {
+  color:white;
+}
+.smallButton{
+  color:#42a3b8;
+}
+.dealIndex{
+  margin: 10px;
+}
+.deal {
+  color:white;
+  border: white solid;
+  padding: 10px;
+}
+.dealName {
+  font-size:22px;
+}
+.dealLocation{
+  font-size: 14px;
+}
+.dealDescription {
+  font-size: 14px;
+}
+.buyButton {
+  background: none;
+  border: none;
+  padding: 5px 5px 5px 5px;
+}
+.dealMenu {
+  background: white;
 }
 .button {
   background: 4px solid white;

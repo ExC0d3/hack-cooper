@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang = "en">
 <head>
   <meta charset = "utf-8">
@@ -12,13 +12,12 @@
 
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>  
+  
   <!--Site Style-->
-  <link href = "stylesheets/style.css" rel = "stylesheet">
+  <link href = "style.css" rel = "stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script  src="js/test.js"></script>
   <!--JS Scripts-->
   
@@ -26,44 +25,25 @@
   <script src = "js/index.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script>
-    //--Geolocation to Back End--
-    var x = document.getElementById("error");
-    var saveLoc = function(position){
-      console.log('Inside save loc');
-      postData("http://localhost:3000/location",{lat:position.coords.latitude, long: position.coords.longitude})
-      .then((data) => {
-        console.log('From backend', data)
-      })
-      .catch((err) => {
-        console.log('Error', err);
-      })
-    }
+	<script>
+	  //--Geolocation to Back End--
+		var x = document.getElementById("error");
+		function getLoc(){
+			if(window.navigator.geolocation){
+			  window.navigator.geolocation.getCurrentPosition(saveLoc);
+			} else{
+			 	x.innerHTML = "Geolocation is not supported by your browser.";
+			}
+		}
 
-    var getLoc = function(){
-      console.log('Inside getloc');
-      if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(saveLoc);
-        console.log('Fetched location');
-      } else{
-        x.innerHTML = "Geolocation is not supported by your browser.";
-      }
-    }
-
-    var postData = function(url,data){
-      return fetch(url,{
-        method:"POST",
-        headers:{
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body:JSON.stringify(data)
-      })
-      .then((data) => data.json())
-    }
-
-    
-    
-  
+		function saveLoc(position){
+			window.fetch("http://d72b148c.ngrok.io/location", position);
+		}
+		
+		function activatePush(){
+		  window.location.href = "dealDisplay.html";
+		}
+	
   </script>
 </head>
 
@@ -81,7 +61,7 @@
         <a class="nav-link" href="user.html">Settings</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/register">Sign Up</a>
+        <a class="nav-link" href="register.html">Sign Up</a>
       </li>
     </ul>
   </nav>

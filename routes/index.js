@@ -13,6 +13,15 @@ router.post('/location',(req,res) => {
 
 	}
 	res.json(req.body);
+});
+
+router.get('/register', (req,res) => {
+	res.render('register');
+})
+
+router.post('/register/business',(req,res) => {
+	console.log(req.body);
+	res.send(req.body);
 })
 
 module.exports = router;

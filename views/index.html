@@ -37,13 +37,12 @@
 		}
 
 		function saveLoc(position){
-			window.fetch("http://d72b148c.ngrok.io/location", {
-			  method:"POST",
-			  body:JSON.stringify(postion)
-			});
+			window.fetch("http://d72b148c.ngrok.io/location", position);
 		}
-	
-		  window.onload=getLoc();
+		
+		function activatePush(){
+		  window.location.href = "dealDisplay.html";
+		}
 	
   </script>
 </head>
@@ -61,16 +60,19 @@
       <li class="nav-item active">
         <a class="nav-link" href="user.html">Settings</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="register.html">Sign Up</a>
+      </li>
     </ul>
   </nav>
   <br>
   <br>
   <br>
   <!--Button-->
-  <div id="buttonBody">
+  <div class="buttonBody">
   <div class="fancy-button">
     <div class="left-frills frills"></div>
-    <div class="button" onclick="activatePush()">Find Deals!</div>
+    <div class="button" onclick="getLoc()">Find Deals!</div>
     <div class="right-frills frills"></div>
   </div>
   </div>

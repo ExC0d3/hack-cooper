@@ -36,62 +36,56 @@
 </head>
 <body>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">GoDeals</a>
-  
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active">
-        <a class="nav-link" href="register.html">Sign Up</a>
-      </li>
-    </ul>
-  </nav>
-  
-  <!--User Settings Menu-->
-  <div class="jumbotron">
-    <h1 class="display-4">Your Settings!</h1>
-    
-    <!--Categories-->
-    <form>
-      <p class="lead">Categories</p>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
-          Retail
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
-          Restaurants
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
-          Movies and Theature
-        </label>
-      </div>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
-          Attractions
-        </label>
-      </div>
-    </form>
-    
-    <!--Range/Number of Deals-->
-    <form>
-      <p class="lead">Access to Deals</p>
-      <div class="form-group">
-        <label for="numNotifications">How many deals do you want to see?</label>
-        <input type="number" class="form-control" id="numNotifications" placeholder="Number of deals">
-      </div>
-      <div class="form-group">
-        <label for="rangeRadius">From how far away would you like to see deals?</label>
-        <input type="number" class="form-control" id="rangeRadius" placeholder="Range around you in miles">
-      </div>
-    </form>
-    <button type="submit" class="btn btn-info" style="margin-left:60px;" onclick=goHome()>Submit and Go to Homepage</button>
+  <div class="topnav">
+    <a href="index.html">GoDeals</a>
+    <a id="settingsLink" href="user.html">SETTINGS</a>
+    <a id="registerLink" href="register.html">SIGN UP</a>
   </div>
-
+  <!--User Settings Menu-->
+  <br>
+  <br>
+  <br>
+  <h1>YOUR SETTINGS</h1>
+  
+  <!--Categories-->
+  <form>
+    <p class="lead">CATEGORIES</p>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        RETAIL
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        RESTAURANTS
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        MOVIES AND THEATRES
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        ATTRACTIONS
+      </label>
+    </div>
+  
+  <!--Range/Number of Deals-->
+    <p class="lead">ACCESS TO DEALS</p>
+    <div class="form-group">
+      <label for="numNotifications">HOW MANY DEALS DO YOU WANT SEE?</label>
+      <input type="number" class="form-control" id="numNotifications" placeholder="Number of deals">
+    </div>
+    <div class="form-group">
+      <label for="rangeRadius">FROM HOW FAR AWAY WOULD YOU LIKE TO SEE DEALS?</label>
+      <input type="number" class="form-control" id="rangeRadius" placeholder="Range around you in miles">
+    </div>
+    <button type="submit" class="btn btn-info" onclick=goHome()>SUBMIT</button>
+  </form>
+  <br>
 </body>

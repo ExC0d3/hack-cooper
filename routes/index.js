@@ -7,11 +7,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/location',(req,res) => {
+
 	if(req.body){
-		console.log(req.body);
+		console.log('Got it: ', req.body);
 
 	}
-	res.send(req.body);
+	res.json(req.body);
 })
 
 module.exports = router;

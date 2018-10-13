@@ -33,7 +33,8 @@
       console.log('Inside save loc');
       postData("http://localhost:3000/location",{lat:position.coords.latitude, long: position.coords.longitude})
       .then((data) => {
-        console.log('From backend', data)
+        console.log('From backend', data);
+          window.location.href='/'+data.url;
       })
       .catch((err) => {
         console.log('Error', err);

@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const deals = require('./dealData');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -12,8 +13,13 @@ router.post('/location',(req,res) => {
 		console.log('Got it: ', req.body);
 
 	}
-	res.json(req.body);
+	res.json({url:'showDeals'});
+	
 });
+
+router.get('/showDeals', (req,res) => {
+	res.render('dealDisplay',{deals});
+})
 
 router.get('/register', (req,res) => {
 	res.render('register');

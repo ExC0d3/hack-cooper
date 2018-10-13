@@ -28,7 +28,7 @@ router.get('/showDeals', (req,res) => {
 			let  t = chance.integer()%10;
 			return {
 				busName: chance.company(),
-				amount: (chance.integer({min:300, max:532432})),
+				amount: chance.integer({min:300, max:532432}),
 				id: deals.length+idx+1,
 				Location: chance.coordinates()
 
@@ -92,5 +92,9 @@ router.post('/addDeal',(req,res) => {
 
 router.get('/user', (req,res) => {
 	res.render('user');
+})
+
+router.get('/push',(req,res) => {
+	res.render('pushPage');
 })
 module.exports = router;

@@ -91,10 +91,19 @@ body, html {
 
 body {
   margin: 0;
-  background: #51b9a7;
+  background-image: linear-gradient(#ff9966, #ff5e62);
 }
 input {
   width: 75%;
+}
+.jumbotron{
+  margin:75px;
+}
+.dealBox{
+  margin:50px;
+  background:#E9ECEF;
+  border-radius:5px;
+  padding:10px;
 }
 .checkbox{
   margin-left:20px;
@@ -103,7 +112,7 @@ input {
   display:flex;
 }
 .button {
-  background: #eb1f48;
+  background: #58cac5;
   border-radius: 5px;
   color: white;
   cursor: pointer;

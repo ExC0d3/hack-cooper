@@ -27,7 +27,7 @@ router.get('/register', (req,res) => {
 
 router.post('/register/business',(req,res) => {
 	console.log(req.body);
-	res.send('OK');
+	res.json({bid:'BID_123_XYZ'});
 })
 
 router.get('/payment',(req,res) => {
@@ -42,6 +42,10 @@ router.get('/payment',(req,res) => {
 router.get('/register/cust',(req,res) => {
 	console.log('New cust: ', req.body);
 	res.send('OK');
+})
+
+router.get('/addDeal',(req,res) => {
+	res.render('addDeal');
 })
 
 module.exports = router;

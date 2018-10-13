@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "utf-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1">
+  <meta name = "description" content = "Bazaar">
+  <meta name = "author" content = "Hack Cooper Team">
+  <link rel = "icon" href = "images/Entypo_e70c(0)_14.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <title> Bazaar </title>
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!--Site Style-->
+  <link href = "style.css" rel = "stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="js/test.js"></script>
+  <!--JS Scripts-->
+  
+  <script src = "js/bootstrap.min.js"></script>
+  <script src = "js/index.js"></script>
+  <script>
+    function goHome(){
+      //send info from form to back end
+      location.href = "index.html";
+    }
+  </script>
+  
+  <!--Toggles-->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+</head>
+<body>
+  <!--Navbar-->
+  <div class="topnav">
+    <a href="index.html">Bazaar</a>
+    <a id="settingsLink" href="user.html">SETTINGS</a>
+    <a id="registerLink" href="register.html">SIGN UP</a>
+    <a id="addDealLink" href="addDeal.html">BUSINESS</a>
+  </div>
+  <!--User Settings Menu-->
+  <br>
+  <br>
+  <br>
+  <h1>YOUR SETTINGS</h1>
+  
+  <!--Categories-->
+  <form>
+    <p class="lead">CATEGORIES</p>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        RETAIL
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        RESTAURANTS
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        MOVIES AND THEATRES
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked data-toggle="toggle" data-onstyle="info" data-offstyle="warning">
+        ATTRACTIONS
+      </label>
+    </div>
+  
+  <!--Range/Number of Deals-->
+    <p class="lead">ACCESS TO DEALS</p>
+    <div class="form-group">
+      <label for="numNotifications">HOW MANY DEALS DO YOU WANT SEE?</label>
+      <input type="number" class="form-control" id="numNotifications" placeholder="Number of deals">
+    </div>
+    <div class="form-group">
+      <label for="rangeRadius">FROM HOW FAR AWAY WOULD YOU LIKE TO SEE DEALS?</label>
+      <input type="number" class="form-control" id="rangeRadius" placeholder="Range around you in miles">
+    </div>
+    <button type="submit" class="btn btn-info" onclick=goHome()>SUBMIT</button>
+  </form>
+  <br>
+</body>

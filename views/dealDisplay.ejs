@@ -30,23 +30,25 @@
 </head>
 <body>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">GoDeals</a>
+    <div class="topnav">
+    <a href="index.html">GoDeals</a>
+    <a id="settingsLink" href="user.html">Settings</a>
+    <a id="registerLink" href="register.html">Sign Up</a>
+  </div>
   
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active">
-        <a class="nav-link" href="user.html">Settings</a>
-      </li>
-    </ul>
-  </nav>
-  <% deals.forEach(function(deal){%>
-    <div class="dealBox">
-      <p class="lead"><%=deal.busName%></p>
-      <p class="lead"><%=deal.Location%></p>
-    <p class="lead"><%=deal.desc%></p>
+  <h1>DEALS</h1>
+  <%deals.forEach(function(deal){%>
+    <div class="dealIndex">
+    <div class="deal">
+      <div class="dealName"><%=deal.busName%></div>
+      <div class="dealLocation"><%=deal.location%></div>
+      <div class="dealDescription"><%=deal.desc%></div>
+      <div class="dealMenu">
+        <button class="buyButton">BUY</button>
+        <button class="buyButton">SAVE</button>
+        <button class="buyButton">SHARE</button>
+      </div>
     </div>
   </div>
   <%})%>
-  
-</body>
 </html>

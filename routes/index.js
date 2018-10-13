@@ -27,7 +27,16 @@ router.get('/register', (req,res) => {
 
 router.post('/register/business',(req,res) => {
 	console.log(req.body);
-	res.send(req.body);
+	res.send('OK');
+})
+
+router.get('/payment',(req,res) => {
+	res.render('payment');
+})
+
+router.get('/register/cust',(req,res) => {
+	console.log('New cust: ', req.body);
+	res.send('OK');
 })
 
 module.exports = router;

@@ -1,4 +1,7 @@
-
+.navbar .navbar-expand-lg .navbar-light .bg-light{
+  background:white;
+}
+ 
 form {
   width: 90%;
   margin: 10px auto;
@@ -10,6 +13,7 @@ form {
 h1 {
   margin: 0 0 30px 0;
   text-align: center;
+  color:white;
 }
 
 input[type="text"],
@@ -112,8 +116,8 @@ input {
   display:flex;
 }
 .button {
-  background: #58cac5;
-  border-radius: 5px;
+  background: 4px solid white;
+  border: solid white;
   color: white;
   cursor: pointer;
   font-family: Roboto;
@@ -130,7 +134,7 @@ input {
   width: 300px;
 }
 .button:hover {
-  background: #ec3257;
+  background: none;
 }
 .button:active {
   box-shadow: inset 0px 2px 8px -1px #d7143b;
@@ -144,7 +148,7 @@ input {
 
 .frills, .frills:after, .frills:before {
   position: absolute;
-  background: #eb1f48;
+  background: #fcff68;
   border-radius: 4px;
   height: 8px;
 }
@@ -199,7 +203,7 @@ input {
 }
 .active .right-frills:after {
   -webkit-animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
-          animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
+          animation: width-to-zero 0.5s ease-out, move-down 0.55s ease-out;
 }
 
 .left-frills:before, .right-frills:after {

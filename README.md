@@ -15,3 +15,8 @@ Solves 2 problems in particular -
 
 `npm start`
 
+# Branches
+
+1) Main PWA - master branch
+2) Complementary Alexa Skill - alexa branch
+

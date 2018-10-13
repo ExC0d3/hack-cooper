@@ -41,15 +41,25 @@
       })
     }
 
+    function geo_error() {
+      alert("Sorry, no position available.");
+    }
+    var geo_options = {
+      enableHighAccuracy: true,
+      maximumAge        : 30000,
+      timeout           : 27000
+    };
+
     var getLoc = function(){
       console.log('Inside getloc');
       if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(saveLoc);
+        navigator.geolocation.getCurrentPosition(saveLoc, geo_error, geo_options);
         console.log('Fetched location');
       } else{
         x.innerHTML = "Geolocation is not supported by your browser.";
       }
     }
+    
 
     var postData = function(url,data){
       return fetch(url,{

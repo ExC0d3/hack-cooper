@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const deals = require('./dealData');
+let deals = require('./dealData');
+const ch = require('chance');
+const chance = new ch();
+const dash = require('lodash');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,7 +21,27 @@ router.post('/location',(req,res) => {
 });
 
 router.get('/showDeals', (req,res) => {
-	res.render('dealDisplay',{deals});
+	if(req.query.new){
+		console.log('New deals');
+		
+		const newDeals = deals.map((deal,idx) => {
+			let  t = chance.integer()%10;
+			return {
+				busName: chance.company(),
+				amount: (chance.integer({min:300, max:532432})),
+				id: deals.length+idx+1,
+				Location: chance.coordinates()
+
+			}
+		});
+		console.log('Sending ', newDeals);
+		deals = deals.concat(newDeals);
+		res.render('dealDisplay',{deals:newDeals});
+	}
+	else{
+		res.render('dealDisplay',{deals:dash.take(deals,6)});	
+	}
+	
 })
 
 router.get('/register', (req,res) => {

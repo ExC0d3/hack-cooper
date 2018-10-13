@@ -96,6 +96,9 @@ body {
 input {
   width: 75%;
 }
+.checkbox{
+  margin-left:20px;
+}
 .buttonBody{
   display:flex;
 }
@@ -155,19 +158,19 @@ input {
   top: 28.5px;
 }
 .active .left-frills {
-  -webkit-animation: move-left 0.38s ease-out, width-to-zero 0.38s ease-out;
-          animation: move-left 0.38s ease-out, width-to-zero 0.38s ease-out;
+  -webkit-animation: move-left 0.5s ease-out, width-to-zero 0.5s ease-out;
+          animation: move-left 0.5s ease-out, width-to-zero 0.5s ease-out;
 }
 .left-frills:before, .left-frills:after {
   left: 15px;
 }
 .active .left-frills:before {
-  -webkit-animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
-          animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+  -webkit-animation: width-to-zero 0.5s ease-out, move-up 0.5s ease-out;
+          animation: width-to-zero 0.5s ease-out, move-up 0.5s ease-out;
 }
 .active .left-frills:after {
-  -webkit-animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
-          animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+  -webkit-animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
+          animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
 }
 
 .right-frills {
@@ -175,19 +178,19 @@ input {
   top: 28.5px;
 }
 .active .right-frills {
-  -webkit-animation: move-right 0.38s ease-out, width-to-zero 0.38s ease-out;
-          animation: move-right 0.38s ease-out, width-to-zero 0.38s ease-out;
+  -webkit-animation: move-right 0.5s ease-out, width-to-zero 0.5s ease-out;
+          animation: move-right 0.5s ease-out, width-to-zero 0.5s ease-out;
 }
 .right-frills:before, .right-frills:after {
   right: 15px;
 }
 .active .right-frills:before {
-  -webkit-animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
-          animation: width-to-zero 0.38s ease-out, move-up 0.38s ease-out;
+  -webkit-animation: width-to-zero 0.5s ease-out, move-up 0.38s ease-out;
+          animation: width-to-zero 0.5s ease-out, move-up 0.38s ease-out;
 }
 .active .right-frills:after {
-  -webkit-animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
-          animation: width-to-zero 0.38s ease-out, move-down 0.38s ease-out;
+  -webkit-animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
+          animation: width-to-zero 0.5s ease-out, move-down 0.5s ease-out;
 }
 
 .left-frills:before, .right-frills:after {

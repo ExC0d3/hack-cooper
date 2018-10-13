@@ -4,7 +4,7 @@
   <meta charset = "utf-8">
   <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
   <meta name = "viewport" content = "width=device-width, initial-scale=1">
-  <meta name = "description" content = "Market Street">
+  <meta name = "description" content = "GoDeals">
   <meta name = "author" content = "Hack Cooper Team">
   <link rel = "icon" href = "">
 
@@ -34,27 +34,21 @@
 			} else{
 			 	x.innerHTML = "Geolocation is not supported by your browser.";
 			}
+			window.location.href = "dealDisplay.html";
 		}
 
 		function saveLoc(position){
 			window.fetch("http://d72b148c.ngrok.io/location", position);
 		}
 		
-		function activatePush(){
-		  window.location.href = "dealDisplay.html";
-		}
-	
   </script>
 </head>
 
 <body>
   
-  <!--Displays error message if browser doesn't support geolocation-->
-  <p id="error"></p>
-  
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Market Street</a>
+  <a class="navbar-brand" href="index.html">GoDeals</a>
   
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item active">
@@ -65,6 +59,8 @@
       </li>
     </ul>
   </nav>
+   <!--Displays error message if browser doesn't support geolocation-->
+  <p id="error"></p>
   <br>
   <br>
   <br>

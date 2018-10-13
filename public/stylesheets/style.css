@@ -1,11 +1,7 @@
+/*navigation*/
 .topnav {
   overflow: hidden;
   background-color: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
-}
-#registerLink, #settingsLink, #addDealLink{
-  font-size: 12px;
-  float: right;
-  padding: 18px 16px;
 }
 .topnav a {
   float:left;
@@ -15,10 +11,40 @@
   text-decoration: none;
   font-size: 17px;
 }
+#registerLink, #settingsLink, #addDealLink{
+  font-size: 12px;
+  float: right;
+  padding: 18px 16px;
+}
 
 .active { 
     color:yellow;
 }
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
+}
+
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  color:white;
+}
+
+.smallText {
+  color:white; 
+  text-align:left;
+  margin: 15px;
+  font-size: 14px;
+}
+/*inputs and forms*/
 
 form {
   width: 90%;
@@ -26,12 +52,6 @@ form {
   padding: 15px;
   background: none;
   border: white solid;
-}
-
-h1 {
-  margin: 0 0 30px 0;
-  text-align: center;
-  color:white;
 }
 
 input[type="text"],
@@ -106,24 +126,11 @@ label.light {
   border-radius: 100%;
 }
 
-body, html {
-  height: 100%;
-  font-family: Roboto;
-}
 
-body {
-  margin: 0;
-  background: linear-gradient(to left top, #ff9966, #ff5e62) fixed;
-}
 input {
   width: 75%;
 }
-.dealBox{
-  margin:50px;
-  background:#E9ECEF;
-  border-radius:5px;
-  padding:10px;
-}
+
 .popUp {
     display: none;
     margin:auto;
@@ -133,7 +140,7 @@ input {
     background: 4px solid white;
     border: solid white;
     color: white;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: .2px;
     text-align: center;
     padding:20px;
@@ -154,15 +161,24 @@ input {
 .checkbox{
   margin-left:20px;
 }
-.buttonBody{
-  display:flex;
-}
+
 .lead {
   color:white;
 }
+
+/*deal list*/
+
 .dealIndex{
   margin: 10px;
 }
+
+.dealBox{
+  margin:50px;
+  background:#E9ECEF;
+  border-radius:5px;
+  padding:10px;
+}
+
 .deal {
   color:white;
   border: white solid;
@@ -177,6 +193,14 @@ input {
 .dealDescription {
   font-size: 14px;
 }
+
+.dealMenu {
+  display: flex;
+  justify-content: center;
+}
+
+/*buttons*/
+
 .buyButton {
   background: white;
   color:#ef6a62;
@@ -185,16 +209,16 @@ input {
   text-align: center;
   margin: 5px;
 }
-.dealMenu {
-  display: flex;
-  justify-content: center;
+
+.buttonBody{
+  display:flex;
 }
+
 .button {
   background: 4px solid white;
   border: solid white;
   color: white;
   cursor: pointer;
-  font-family: Roboto;
   font-size: 1.9em;
   height: 65px;
   letter-spacing: .2px;

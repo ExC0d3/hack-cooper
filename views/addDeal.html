@@ -8,7 +8,7 @@
   <meta name = "author" content = "Hack Cooper Team">
   <link rel = "icon" href = "images/Entypo_e70c(0)_14.png">
 
-  <title> Market Street </title>
+  <title> iDeal </title>
 
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,49 +23,30 @@
   <script src = "js/bootstrap.min.js"></script>
   <script src = "js/index.js"></script>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script>
-	  //--Geolocation to Back End--
-		var x = document.getElementById("error");
-		function getLoc(){
-			if(navigator.geolocation){
-			  navigator.geolocation.getCurrentPosition(saveLoc);
-			} else{
-			 	x.innerHTML = "Geolocation is not supported by your browser.";
-			}
-			location.href = "dealDisplay.html";
-		}
-
-		function saveLoc(position){
-			fetch("http://d72b148c.ngrok.io/location", position);
-		}
-		
-  </script>
 </head>
-
 <body>
-  <div class="topnav">
+<div class="topnav">
     <a href="index.html">iDeal</a>
     <a id="settingsLink" href="user.html">SETTINGS</a>
     <a id="registerLink" href="register.html">SIGN UP</a>
-    <a id="addDealLink" href="addDeal.html">BUSINESS</a>
+</div>
+
+<div id="newDealForm">
+    <h1>ADD DEAL</h1>
+    <form name="newDeal">
+    <div class="form-group">
+      <label for="InputID">BUSINESS ID</label>
+      <input type="text" class="form-control" id="InputID">
+    </div>
+    <div class="form-group">
+      <label for="InputDealDescription">DEAL DESCRIPTION</label>
+      <input type="text" class="form-control" id="InputDealDescription" rows="4">
+    </div>
+    <div class="form-group">
+      <label for="InputExpiration">DEAL EXPIRATION</label>
+      <input type="date" class="form-control" id="InputExpiration">
+    </div>
+    <button class="btn btn-info" onclick="showPopUp()">SUBMIT</button>
+  </form>
   </div>
-  
-  <p id="error"></p>
-  <br>
-  <br>
-  <br>
-  <!--Button-->
-  <div class="buttonBody">
-  <div class="fancy-button">
-    <div class="left-frills frills"></div>
-    <div class="button" onclick="getLoc()">Find Deals!</div>
-    <div class="right-frills frills"></div>
-  </div>
-  </div>
-  
-  <footer>
-    
-  </footer>
-</body>
-</html>
+ </body>

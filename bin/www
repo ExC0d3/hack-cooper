@@ -7,7 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('hack-cooper:server');
 var http = require('http');
-
+var fs = require('fs');
+var path = require('path');
 /**
  * Get port from environment and store in Express.
  */
@@ -17,6 +18,13 @@ app.set('port', port);
 
 /**
  * Create HTTP server.
+ https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app)
+.listen(3000, function () {
+  console.log('Example app listening on port 3000! Go to https://localhost:3000/')
+})
  */
 
 var server = http.createServer(app);

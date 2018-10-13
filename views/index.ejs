@@ -31,7 +31,7 @@
     var x = document.getElementById("error");
     var saveLoc = function(position){
       console.log('Inside save loc');
-      postData("https://localhost:3000/location",{lat:position.coords.latitude, long: position.coords.longitude})
+      postData("/location",{lat:position.coords.latitude, long: position.coords.longitude})
       .then((data) => {
         console.log('From backend', data);
           window.location.href='/'+data.url;

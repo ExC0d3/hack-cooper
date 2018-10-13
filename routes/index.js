@@ -31,7 +31,12 @@ router.post('/register/business',(req,res) => {
 })
 
 router.get('/payment',(req,res) => {
-	res.render('payment');
+	console.log(req.query);
+	deal = deals.filter((deal) => {
+		return deal.id === parseInt(req.query.id);
+	})[0];
+	console.log(deal);
+	res.render('payment',{amount:deal.amount});
 })
 
 router.get('/register/cust',(req,res) => {

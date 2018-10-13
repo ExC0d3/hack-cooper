@@ -48,4 +48,22 @@ router.get('/addDeal',(req,res) => {
 	res.render('addDeal');
 })
 
+router.post('/paymentConfirmation',(req,res)=>{
+	res.render('paymentConfirmation');
+})
+
+router.get('/submitted', (req,res) => {
+	res.render('submitted');
+})
+
+router.post('/addDeal',(req,res) => {
+	deals.push({
+		id:deals.length+1,
+		desc:req.body.busDesc,
+		Location:"Loc " + parseInt(deals[deals.length-1].Location.split(" ")[1]),
+		amount:deals[deals.length-1].amount + 100
+	})
+	console.log(deals);
+	res.redirect('/submitted');
+})
 module.exports = router;

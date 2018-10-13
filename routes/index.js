@@ -66,4 +66,8 @@ router.post('/addDeal',(req,res) => {
 	console.log(deals);
 	res.redirect('/submitted');
 })
+
+router.get('/user', (req,res) => {
+	res.render('user');
+})
 module.exports = router;

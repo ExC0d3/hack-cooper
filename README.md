@@ -20,3 +20,8 @@ Solves 2 problems in particular -
 1) Main PWA - master branch
 2) Complementary Alexa Skill - alexa branch
 
+![Alt text](screenshot/main.png "Main")
+
+![Alt text](screenshot/signup.png "Signup")
+
+![Alt text](screenshot/deals.png "Deals")

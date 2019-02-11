@@ -50,7 +50,11 @@ router.get('/register', (req,res) => {
 
 router.post('/register/business',(req,res) => {
 	console.log(req.body);
-	res.json({bid:'BID_123_XYZ'});
+	res.redirect('/confirmed');
+})
+
+router.get('/confirmed',(req,res) => {
+	res.render('confirmed');
 })
 
 router.get('/payment',(req,res) => {
@@ -97,4 +101,5 @@ router.get('/user', (req,res) => {
 router.get('/push',(req,res) => {
 	res.render('pushPage');
 })
+
 module.exports = router;
